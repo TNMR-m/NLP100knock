@@ -1,2 +1,2 @@
-mozi = 'stressed'
-print(mozi[::-1])
+str1 = 'stressed'
+print(str1[::-1])
