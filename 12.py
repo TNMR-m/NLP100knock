@@ -5,8 +5,7 @@ col1 = []   # col1：col1.txtに入れるデータを入れるリスト（リス
 col2 = []   # col2：col2.txtに入れるデータを入れるリスト（リスト）
 
 for f_line in f_list:                       # f_line：f_listの中の１行（文字列）
-    f_line_str = f_line.replace('\t',' ')   # f_line_str：Tabを半角スペースに変換した一行（文字列）
-    f_line_list = f_line_str.split()        # f_line_list：要素ごとに区切った一行（リスト）
+    f_line_list = f_line.split('\t')        # f_line_list：Tabごとに区切った一行（リスト）
     col1.append(f_line_list[0])             # col1にn行目の１列目を格納
     col2.append(f_line_list[1])             # col2にn行目の２列目を格納
 
