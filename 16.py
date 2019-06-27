@@ -4,19 +4,25 @@ from sys import argv
 
 f_list = []
 f_list2 = []
+result = []
 
-# 「ファイルをN分割」
-# https://www.python.ambitious-engineer.com/archives/1843
-
-
-with open(argv[1], encoding = 'utf-8') as f:
+# with open(argv[1], encoding = 'utf-8') as f:
+with open('hightemp.txt', encoding = 'utf-8') as f:
     for line in f:
         f_list.append(line)
-        
-gyousu = len(f_list) / argv[2]
-# 全行数÷分割数の商の数だけ前からとる
 
-# 前から分割数分取る→変数に分割数足す→続きから(変数)行まで取る→変数が全体の行数を超えたらその一周を終えてループ終了
+'''
+if argv[2] != 0:
+    cut_num = len(f_list) / argv[2] # cut_num : 分割したひとつごとの行数
+else:
+    cut_num = len(f_list)
+'''
+cut_num = len(f_list) / 3
 
-for i in range(argv[2] + ):
-    f_list2.append(f_list[i])
+# for i in range(argv[2]):
+for i in range(1, 3):
+    for j in range(int(cut_num)):
+        f_list2.append(f_list[j+j*i])   # list
+    result.append(f_list2)
+
+print(result)
